@@ -65,7 +65,7 @@ const VenueCard = ({ venue }: VenueCardProps) => {
 
   return (
     <>
-      <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden hover:shadow-xl hover:shadow-pink-500/10 transition-all duration-500 h-full flex flex-col">
+      <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden hover:shadow-xl hover:shadow-pink-500/10 transition-all duration-500 h-full flex flex-col border-2 border-pink-500/30 hover:border-pink-500/60">
         <div 
           className="relative overflow-hidden aspect-video"
           onMouseEnter={() => setIsHovered(true)}
