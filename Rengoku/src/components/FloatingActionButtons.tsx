@@ -1,4 +1,5 @@
 import React from 'react';
+import { Phone } from 'lucide-react';
 
 const FloatingActionButtons = () => {
   const handleWhatsAppClick = () => {
@@ -7,8 +8,23 @@ const FloatingActionButtons = () => {
     window.open(whatsappUrl, '_blank');
   };
 
+  const handleCallClick = () => {
+    const phoneNumber = '+919959059632';
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+      {/* Call Button */}
+      <button
+        onClick={handleCallClick}
+        className="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110"
+        aria-label="Call +91 99590 59632"
+      >
+        <Phone className="h-6 w-6" />
+      </button>
+
+      {/* WhatsApp Button */}
       <button
         onClick={handleWhatsAppClick}
         className="w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110"
